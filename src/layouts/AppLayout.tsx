@@ -6,6 +6,7 @@ import { useAuthStore } from '../stores/authStore'
 
 const navItems = [
   { to: '/', label: 'Dashboard', icon: GaugeIcon },
+  { to: '/simulation', label: 'Simulation', icon: GaugeIcon },
   { to: '/trains', label: 'Trains', icon: TrainIcon },
   { to: '/lines', label: 'Lines', icon: LineIcon },
   { to: '/tracks', label: 'Tracks', icon: RailIcon },

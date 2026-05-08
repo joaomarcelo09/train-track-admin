@@ -12,6 +12,7 @@ const TrainsPage = lazy(() => import('../pages/TrainsPage'))
 const LinesPage = lazy(() => import('../pages/LinesPage'))
 const LineDetailsPage = lazy(() => import('../pages/LineDetailsPage'))
 const TracksPage = lazy(() => import('../pages/TracksPage'))
+const SimulationPage = lazy(() => import('../pages/SimulationPage'))
 
 export function AppRoutes() {
   return (
@@ -30,6 +31,7 @@ export function AppRoutes() {
             <Route path="lines" element={<LinesPage />} />
             <Route path="lines/:lineId" element={<LineDetailsPage />} />
             <Route path="tracks" element={<TracksPage />} />
+            <Route path="simulation" element={<SimulationPage />} />
           </Route>
         </Route>
       </Routes>

@@ -17,6 +17,37 @@ export type Track = {
   elevation: number
 }
 
+export type SimulationPayload = {
+  train_id: string
+  line_id: string
+}
+
+export type SimulationPoint = {
+  trackId: number
+  trackIndex: number
+  distance: number
+  cumulativeDistance: number
+  electricityUsage: number
+  elevation: number
+  bending: number
+  trackLength: number
+}
+
+export type SimulationSummary = {
+  totalElectricityUsage: number
+  totalLineLength: number
+  averageElectricityConsumption: number
+  highestEnergyPoint: SimulationPoint | null
+  highestElevationPoint: SimulationPoint | null
+}
+
+export type SimulationResult = {
+  payload: SimulationPayload
+  points: SimulationPoint[]
+  summary: SimulationSummary
+  source: 'api' | 'local'
+}
+
 export type ToastKind = 'success' | 'error'
 
 export type AuthUser = {
