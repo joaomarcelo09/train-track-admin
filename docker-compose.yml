@@ -1,0 +1,10 @@
+services:
+  train-track-admin:
+    build:
+      context: .
+      args:
+        VITE_API_URL: ${VITE_API_URL:-http://localhost:8000/api}
+    image: train-track-admin:latest
+    ports:
+      - "${FRONTEND_PORT:-5173}:80"
+    restart: unless-stopped
